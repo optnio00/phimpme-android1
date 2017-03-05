@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'jacoco-android'
+
+android {
+    compileSdkVersion 'Google Inc.:Google APIs:23'
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "vn.mbm.phimp.me"
+        minSdkVersion 16
+        targetSdkVersion 25
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+        }
+        debug {
+            testCoverageEnabled true
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/maven/org.apache.maven/maven-artifact/pom.xml'
+        exclude 'licenses/javolution.license.TXT'
+        exclude 'META-INF/maven/org.apache.maven.wagon/wagon-http-shared/pom.properties'
+        exclude 'META-INF/maven/*'
+        exclude 'org/codehaus/classworlds/uberjar/boot/Bootstrapper.class'
+    }
+
+    lintOptions {
+        abortOnError false
+        disable "Instantiatable"
+    }
+    tasks.withType(JavaCompile) {
+        configure(options) {
+            // TODO
+            compilerArgs << "-Xlint:unchecked"
+            compilerArgs << "-Xlint:-rawtypes"
+        }
+    }
+
+    dexOptions {
+    	jumboMode = true
+    }
+
+}
+android {
+    useLibrary 'org.apache.http.legacy'
+}
+dependencies {
+    compile files('libs/CWAC-AdapterWrapper.jar')
+    compile files('libs/CWAC-Bus.jar')
+    compile files('libs/CWAC-Task.jar')
+    //compile 'com.paypal.sdk:paypal-android-sdk:2.14.4'
+    compile files('libs/PayPal_MPL.jar')
+    compile files('libs/android-rss-1.0.0.jar')
+    compile files('libs/crittercism_v2_1_3_rev1.jar')
+    compile files('libs/httpmime-4.1.1.jar')
+    compile files('libs/jdom-1.1.1-android-fork.jar')
+    compile files('libs/joooidapi.jar')
+    compile files('libs/jtwitter.jar')
+    compile files('libs/osmdroid-android-3.0.8.jar')
+    compile files('libs/scribe-1.2.3.jar')
+    compile files('libs/signpost-commonshttp4-1.2.1.2.jar')
+    compile files('libs/signpost-core-1.2.1.2.jar')
+    compile files('libs/slf4j-android-1.5.8.jar')
+    compile files('libs/tagsoup-1.2.1.jar')
+    compile files('libs/uk.co.jasonfry.android.tools.jar')
+    compile project(':viewflow')
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.google.android.gms:play-services-maps:9.0.2'
+    compile 'com.google.android.gms:play-services-ads:9.0.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+}

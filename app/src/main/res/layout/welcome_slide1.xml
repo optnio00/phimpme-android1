@@ -14,12 +14,12 @@
         <ImageView
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/ic_camera" />
+            android:src="@drawable/search" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EQUIFEST 2K17"
+            android:text="Phimp.me"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
@@ -31,7 +31,7 @@
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
             android:textAlignment="center"
-            android:text="Equilibrio is the technical festival of Guru Ghasidas Vishwavidyalaya. Equilibrio has created an unmatched aura for science and technology attracting students , year after year."
+            android:text="Phimp.me is a Photo App for Android that aims to replace proprietary photo applications. It offers features such as taking photos, adding filters, editing images and uploading them to social networks."
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />
 

@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="MORE THAN JUST CELEBRATION"
+            android:text="CAPTURE and PLAY"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="italic" />
@@ -32,7 +32,7 @@
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
             android:textAlignment="center"
-            android:text="The sole motto of EQUILIBRIO is to discover the best ideas and innovations from across the nation that would reform and revolutionize the present day scenario in India."
+            android:text="It offers features such as taking photos, adding filters, editing images and uploading them to social networks."
             android:textColor="@android:color/white"
             android:textSize="16dp" />
 
